@@ -1,0 +1,65 @@
+@-webkit-keyframes polygon {
+  0% {
+    stroke-dasharray:0 300;
+  }
+  100% {
+    stroke-dasharray:300 0;
+  }
+}
+@keyframes polygon {
+  0% {
+    stroke-dasharray:0 300;
+  }
+  100% {
+    stroke-dasharray:300 0;
+  }
+}
+polygon {
+  stroke-width: 1;
+  fill: transparent;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+.hex1 {
+  animation: 4s polygon forwards;
+  -webkit-animation: 4s polygon forwards;
+}
+.hex2 {
+  animation: 8s polygon forwards;
+  -webkit-animation: 8s polygon forwards;
+}
+.hex3 {
+  animation: 12s polygon alternate backwards;
+  -webkit-animation: 12s polygon alternate backwards;
+}
+.hex4 {
+  animation: 10s polygon alternate backwards;
+  -webkit-animation: 10s polygon alternate backwards;
+}
+circle {
+  fill: #fff;
+  -webkit-animation-name: circle-glow;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+
+  animation-name: circle-glow;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+
+}
+
+@-webkit-keyframes circle-glow {
+  0% { fill: hsla(209, 20%, 32%, 1); }
+  50% { fill: hsla(209, 20%, 49%, 1); }
+  100% { fill: hsla(360, 100%, 100%, 1); }
+}
+
+@keyframes circle-glow {
+  0% { fill: hsla(209, 20%, 32%, 1); }
+  50% { fill: hsla(209, 20%, 49%, 1); }
+  100% { fill: hsla(360, 100%, 100%, 1); }
+}

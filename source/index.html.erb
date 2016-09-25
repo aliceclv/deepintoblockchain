@@ -1,0 +1,121 @@
+---
+layout: "layout"
+title: "Blockchain Event"
+team:
+  - Chloé
+  - Maxime
+  - John
+  - Alice
+---
+
+<div id='block1' class="block">
+  <div class="header">
+    <div class="col-xs-12">
+      <h1>Deep into Blockchain</h1>
+      <br>
+      <%= partial 'animation.html.erb' %>
+<!--       TODO: mailchimp connect -->
+      <h1 class='title-right'>Join us on the October 19th</h1>
+    </div>
+  </div>
+</div>
+<div id="trans1">
+  <div class="scroll-down">
+    <% link_to "#block2" do %>
+      <%= image_tag "poly.svg", style: "height: 50px; margin-top: 5px;" %>
+    <% end %>
+  </div>
+</div>
+<div id='block2' class="block">
+  <div class="content">
+    <div class="col-xs-12">
+      <h1>Blockchain ?</h1>
+      Want to learn more about this lifechanging bullshit?
+
+      First graphIcon
+      Here is blablabla
+
+      SecondgraphIcon
+      Blablabla
+
+      Third graphIcon
+      blablablabla
+    </div>
+  </div>
+</div>
+<div id='trans2'>
+  <div class="scroll-down">
+    <% link_to '#block3' do %>
+      <%= image_tag 'poly.svg', style: 'height: 50px;margin-top: 5px;' %>
+    <% end %>
+  </div>
+</div>
+<div id='block3' class="block">
+  <div class="action">
+    <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+      <%= image_tag 'pacman.svg', style: 'height:60px;margin-bottom:5px;' %>
+      <h2>Simulation game</h2>
+      <br>
+      <p>
+        Willing to discover the inner workings of blockchain?
+        Come and test your luck within our 20 minutes game
+        You'll experience blockchain in a way you can truly understand it!
+      </p>
+    </div>
+    <div class="col-xs-12 col-sm-5">
+      <%= image_tag 'mouth.svg', style: 'height:60px;margin-bottom:5px;' %>
+      <h2>Deep talk</h2>
+      <br>
+      <p>
+        Get the insights of the hottest people in the blockchain community!
+        Through a 40 minutes talk you'll get to know several applications and business models using this technology
+      </p>
+    </div>
+    <div class="col-xs-12">
+      <% link_to '#' do %>
+        <h1>I'm in!</h1>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div id='trans3'>
+  <div class="scroll-down">
+    <% link_to '#block4' do %>
+      <%= image_tag 'poly.svg', style: 'height: 50px;margin-top: 5px;' %>
+    <% end %>
+  </div>
+</div>
+<div id='block4' class="block">
+  <div class="partner">
+    <h1>Our partners</h1>
+    Join us now!
+    Other call to action:
+    Come on join us little flower
+  </div>
+</div>
+<div id='trans4'>
+  <div class="scroll-down">
+    <% link_to '#block5' do %>
+      <%= image_tag 'poly-light.svg', style: 'height: 50px;margin-top: 5px;' %>
+    <% end %>
+  </div>
+</div>
+<div id='block5' class="block">
+  <div class="team">
+    Made with love by
+    <% current_page.data.team.each do |t| %>
+      <%= t %>
+    <% end %>
+  </div>
+</div>
+
+<% content_for :js do %>
+<script>
+  $(function() {
+    $('a[href*="#"]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
+</script>
+<% end %>

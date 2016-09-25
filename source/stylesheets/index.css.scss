@@ -1,0 +1,90 @@
+#trans1 {
+  height: 10vh;
+  background-color: #FFF6E5;
+  background-size: cover;
+}
+
+#trans2 {
+  height: 10vh;
+  background-color: #E74C3C;
+  background-size: cover;
+}
+
+#trans3 {
+  height: 10vh;
+  background-color: #2185C5;
+  background-size: cover;
+}
+
+#trans4 {
+  height: 10vh;
+  background-color: #3E454C;
+  background-size: cover;
+}
+
+#block1 {
+  background-color: #3E454C;
+  background-size: cover;
+  color: #FFF6E5;
+}
+
+#block2 {
+  background-color: #FFF6E5;
+  background-size: cover;
+  color: #3E454C;
+}
+
+#block3 {
+  background-color: #E74C3C;
+  background-size: cover;
+  color: #3E454C;
+}
+
+#block4 {
+  background-color: #2185C5;
+  background-size: cover;
+  color: #3E454C;
+}
+
+#block5 {
+  background-color: #3E454C;
+  background-size: cover;
+  color: #FFF6E5;
+}
+
+.block {
+  height: 90vh;
+}
+
+.header {
+  padding: 5%;
+}
+
+.content {
+  padding: 5%;
+}
+
+.action {
+  padding: 5%;
+  text-align: center;
+  p {
+    font-size: 18px;
+    font-style: italic;
+  }
+}
+
+.team {
+  padding: 5%;
+}
+
+.partner {
+  padding: 5%;
+}
+.scroll-down {
+  text-align: center;
+  padding: 3px;
+}
+
+.title-right {
+  text-align: right;
+}
