@@ -1,3 +1,6 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 #trans1 {
   height: 10vh;
   background-color: #FFF6E5;
@@ -71,6 +74,20 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .action {
+    p {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
 .action {
   padding: 5%;
   text-align: center;
@@ -80,6 +97,7 @@
   }
   a {
     color: #FFF6E5;
+    text-decoration: none;
     &:hover {
       text-decoration: none;
       h1 {
@@ -108,4 +126,15 @@
 
 .title-right {
   text-align: right;
+}
+
+.social-links {
+  text-align: right;
+  margin-right: 10%;
+  font-size: 28px;
+  i {
+    border: 1px solid;
+    border-radius: 100px;
+    padding: 10px 15px 5px 15px;
+  }
 }
