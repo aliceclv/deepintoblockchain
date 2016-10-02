@@ -15,22 +15,14 @@ team:
       <br>
       <%= partial 'animation.html.erb' %>
 <!--       TODO: mailchimp connect -->
-      <% link_to '#' do %>
+      <% link_to '#block3' do %>
         <h1 class='title-right'>Join us on the October 19th</h1>
       <% end %>
       <div class="social-links">
-        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <% link_to 'http://bit.ly/2dCaUwi', target:'_blank' do %>
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        <% end %>
       </div>
-
-<!--       <form action="//deepintoblockchain.us14.list-manage.com/subscribe/post?u=6735381d7b4ac4fded121f93f&amp;id=59ddc94929" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <label for="mce-EMAIL"></label>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email address" required>
- -->
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-<!--           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6735381d7b4ac4fded121f93f_59ddc94929" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-      </form>
- -->
     </div>
   </div>
 </div>
@@ -73,29 +65,48 @@ team:
 </div>
 <div id='block3' class='block'>
   <div class='action'>
-    <div class='col-xs-12 col-sm-5 col-sm-offset-1'>
-      <%= image_tag 'pacman.svg', style: 'height:60px;margin-bottom:5px;' %>
-      <h2>Simulation game</h2>
-      <br>
-      <p>
-        Willing to discover the inner workings of blockchain?
-        Come and test your luck within our 20 minutes game
-        You'll experience blockchain in a way you can truly understand it!
-      </p>
+    <div class="row">
+      <div class='col-xs-12 col-sm-5 col-sm-offset-1'>
+        <%= image_tag 'pacman.svg' %>
+        <h2>Simulation game</h2>
+        <br>
+        <p>
+          Willing to discover the inner workings of blockchain?
+          Come and test your luck within our 20 minutes game
+          You'll experience blockchain in a way you can truly understand it!
+        </p>
+      </div>
+      <div class='col-xs-12 col-sm-5'>
+        <%= image_tag 'mouth.svg' %>
+        <h2>Deep talk</h2>
+        <br>
+        <p>
+          Get the insights of the hottest people in the blockchain community!
+          Through a 40 minutes talk you'll get to know several applications and business models using this technology
+        </p>
+      </div>
     </div>
-    <div class='col-xs-12 col-sm-5'>
-      <%= image_tag 'mouth.svg', style: 'height:60px;margin-bottom:5px;' %>
-      <h2>Deep talk</h2>
-      <br>
-      <p>
-        Get the insights of the hottest people in the blockchain community!
-        Through a 40 minutes talk you'll get to know several applications and business models using this technology
-      </p>
+    <div class="row">
+      <div id="join">
+        <% link_to '#' do %>
+          <h1>I'm in!</h1>
+        <% end %>
+      </div>
     </div>
-    <div class='col-xs-12 col-sm-3 col-sm-offset-4'>
-      <% link_to '#' do %>
-        <h1>I'm in!</h1>
-      <% end %>
+    <div id='subscribe-form' class='col-xs-12 hidden'>
+      <form action="//deepintoblockchain.us14.list-manage.com/subscribe/post?u=6735381d7b4ac4fded121f93f&amp;id=59ddc94929" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <ul>
+          <li>
+            <label for="mce-EMAIL"></label>
+            <input type="email" value="" name="EMAIL" class="" id="mce-EMAIL" placeholder="Enter your email address" required>
+          </li>
+          <li>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6735381d7b4ac4fded121f93f_59ddc94929" tabindex="-1" value=""></div>
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="">
+          </li>
+        </ul>
+      </form>
     </div>
   </div>
 </div>
@@ -123,21 +134,26 @@ team:
 </div>
 <div id='block5' class='block'>
   <div class='team'>
-    Made with love by
-    <% current_page.data.team.each do |t| %>
-      <%= t %>
-    <% end %>
-    <i class="fa fa-facebook" aria-hidden="true"></i>
+    <div class="col-xs-4">
+      <h1>Made with love by</h1>
+    </div>
+    <div class="col-xs-8">
+      <%= image_tag 'team.png' %>
+    </div>
   </div>
 </div>
 
 <% content_for :js do %>
 <script>
-  $(function() {
-    $('a[href*="#"]').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-    });
+$( document ).ready(function() {
+  $('a[href*="#"]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
   });
+  $('#join').on('click', function() {
+    $(this).addClass('hidden');
+    $('#subscribe-form').removeClass('hidden');
+  });
+});
 </script>
 <% end %>

@@ -74,20 +74,6 @@
   }
 }
 
-@media screen and (max-width: 420px) {
-  .action {
-    p {
-      font-size: 16px;
-    }
-    h1 {
-      font-size: 28px;
-    }
-    h2 {
-      font-size: 24px;
-    }
-  }
-}
-
 .action {
   padding: 5%;
   text-align: center;
@@ -109,6 +95,35 @@
     border-radius: 5px;
     padding: 15px;
     border: 2px solid;
+  }
+  img {
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  form {
+    font-size: 28px;
+  }
+  ul {
+    list-style: none;
+    display: -webkit-inline-box;
+    color: #FFF6E5;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid;
+    li {
+      input {
+        background-color: #E74C3C;
+        border: none;
+        &:focus{
+          outline: 0;
+        }
+      }
+
+    }
+  }
+  #join {
+    width: 30%;
+    margin: 0 auto;
   }
 }
 
@@ -132,9 +147,81 @@
   text-align: right;
   margin-right: 10%;
   font-size: 28px;
+
   i {
     border: 1px solid;
     border-radius: 100px;
     padding: 10px 15px 5px 15px;
+    &:hover {
+      background-color: rgba(255, 246, 229, 0.4);
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .action {
+    p {
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: -10px;
+    }
+    img {
+      display: none;
+    }
+    form {
+      input {
+        font-size: 18px;
+      }
+    }
+    #join {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    svg {
+      display: none;
+    }
+  }
+  .action {
+    p {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    img {
+      height: 40px;
+    }
+    form {
+      font-size: 24px;
+    }
+    ul {
+      display: inline-table;
+      width: 100%;
+    }
+    #join {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .team {
+    img {
+      display: none;
+    }
   }
 }
