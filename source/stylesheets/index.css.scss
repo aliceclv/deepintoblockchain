@@ -218,10 +218,16 @@
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1032px) {
   .team {
     img {
       display: none;
     }
+  }
+}
+
+@media screen and (min-width: 1032px) {
+  .team-name {
+    display: none;
   }
 }

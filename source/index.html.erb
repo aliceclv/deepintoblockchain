@@ -120,9 +120,7 @@ team:
 <div id='block4' class='block'>
   <div class='partner'>
     <h1>Our partners</h1>
-    Join us now!
-    Other call to action:
-    Come on join us little flower
+    <h1>ESCP Europe</h1>
   </div>
 </div>
 <div id='trans4'>
@@ -139,6 +137,13 @@ team:
     </div>
     <div class="col-xs-8">
       <%= image_tag 'team.png' %>
+    </div>
+    <div class="team-name">
+      <% current_page.data.team.each do |m| %>
+      <div class="col-xs-12">
+        <h2><%= m %></h2>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
