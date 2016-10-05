@@ -6,6 +6,9 @@ team:
   - Maxime
   - John
   - Alice
+partners:
+  - escp_europe
+  - blue_factory
 ---
 
 <div id='block1' class='block'>
@@ -45,7 +48,7 @@ team:
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-5 col-sm-offset-7">
-        <p>Last year 500millions have been invested in Blockchain start ups, some of them issued high funding at the first round: Digital Asset Holding reached 60millions</p>
+        <p>Last year 500 million dollars have been invested in Blockchain start ups, some of them issued high funding at the first round: Digital Asset Holding reached 60 million dollars</p>
       </div>
     </div>
     <div class="row">
@@ -80,8 +83,8 @@ team:
         <h2>Deep talk</h2>
         <br>
         <p>
-          Get the insights of the hottest people in the blockchain community!
-          Through a 40 minutes talk you'll get to know several applications and business models using this technology
+          Come back to life after all this technology and activity insight!
+          Use the cold refreshements to turn from listening to chatting mode. Share your acquired knowledge with others whilst enjoying drinks and cool music!
         </p>
       </div>
     </div>
@@ -112,27 +115,16 @@ team:
 <div id='trans3'>
   <div class='scroll-down'>
     <% link_to '#block4' do %>
-      <%= image_tag 'poly.svg', style: 'height: 50px;margin-top: 5px;' %>
-    <% end %>
-  </div>
-</div>
-<div id='block4' class='block'>
-  <div class='partner'>
-    <h1>Our partners</h1>
-    <h1>ESCP Europe</h1>
-  </div>
-</div>
-<div id='trans4'>
-  <div class='scroll-down'>
-    <% link_to '#block5' do %>
       <%= image_tag 'poly-light.svg', style: 'height: 50px;margin-top: 5px;' %>
     <% end %>
   </div>
 </div>
-<div id='block5' class='block'>
+<div id='block4' class='block'>
   <div class='team'>
-    <div class="col-xs-4">
-      <h1>Made with love by</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Made with love by</h1>
+      </div>
     </div>
     <div class="col-xs-8">
       <%= image_tag 'team.png' %>
@@ -143,6 +135,25 @@ team:
         <h2><%= m %></h2>
       </div>
       <% end %>
+    </div>
+    <div class="col-xs-4">
+      <div class="partner-name">
+        <h1>They support us</h1>
+        <% current_page.data.partners.each do |p| %>
+          <div class="row">
+            <div class="col-xs-12 col-sm-2">
+              <%= image_tag "#{p}.png" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="partner-name">
+      <div class="col-xs-12">
+      <% current_page.data.partners.each do |p| %>
+          <h2>//<%= p.humanize %></h2>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

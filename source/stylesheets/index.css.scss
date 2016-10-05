@@ -15,12 +15,6 @@
 
 #trans3 {
   height: 10vh;
-  background-color: #2185C5;
-  background-size: cover;
-}
-
-#trans4 {
-  height: 10vh;
   background-color: #3E454C;
   background-size: cover;
 }
@@ -45,15 +39,11 @@
 
 #block4 {
   background-color: #2185C5;
-  background-size: cover;
-  color: #3E454C;
-}
-
-#block5 {
   background-color: #3E454C;
   background-size: cover;
   color: #FFF6E5;
 }
+
 
 .block {
   height: 90vh;
@@ -216,6 +206,32 @@
       margin: 0 auto;
     }
   }
+  .team {
+    h1 {
+      font-size: 26px;
+    }
+  }
+  .team-name {
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .partner-name {
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .content {
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 1032px) {
@@ -228,6 +244,9 @@
 
 @media screen and (min-width: 1032px) {
   .team-name {
+    display: none;
+  }
+  .partner-name {
     display: none;
   }
 }
